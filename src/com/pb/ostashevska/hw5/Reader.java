@@ -1,5 +1,7 @@
 package com.pb.ostashevska.hw5;
 
+import java.util.Arrays;
+
 public class Reader {
     private String fullName;
     private  int libraryCardNumber;
@@ -113,12 +115,12 @@ public class Reader {
         }
     }
 
-    static Book returnBook(String fullName, Book... book) {
+    static Book returnBook(String fullName, Book[] books) {
         if (fullName != null) {
             System.out.println(fullName + " повернув книги: ");
-            for (int j = 0; j < book.length; j++) {
-                System.out.println(book[j]);
-            }
+           // for (int j = 0; j < books.length; j++) {
+                System.out.println(Arrays.asList(books));
+         //   }
         } else {
             System.out.println(fullName + " не повернув жодної книги");
         }

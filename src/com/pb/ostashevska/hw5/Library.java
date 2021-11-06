@@ -6,6 +6,7 @@ public class Library {
         Book book1 = new Book("Хоббіт, або туди і назад", "Дж. Р.Р. Толкін", 1985);
         Book book2 = new Book("Сильмариліон", "Дж. Р.Р. Толкін", 2008);
 
+        Book [] books = new Book[] {book, book1, book2};
         Reader reader= new Reader();
         Reader reader1= new Reader();
         Reader reader2= new Reader();
@@ -43,7 +44,7 @@ public class Library {
 
         reader.returnBook("Осташевська Н.С.", 2);
         reader.returnBook("Осташевська Н.С.","Володар Перстнів", "Хоббіт, або туди і назад ");
-        reader.returnBook("Осташевська Н.С.",book, book1, book2);
+        reader.returnBook("Осташевська Н.С.", books);
 
 
     }
