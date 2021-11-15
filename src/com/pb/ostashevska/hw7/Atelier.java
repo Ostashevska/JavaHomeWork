@@ -3,19 +3,19 @@ package com.pb.ostashevska.hw7;
 public class Atelier {
 
     public static void dressMan(Clothes[] clothes){
-        for (Clothes clothes1: clothes){
-            if (clothes1 instanceof ManClothes) {
-                ManClothes mc = (ManClothes) clothes1;
-                mc.dressMan();
+        for (Clothes allClothes: clothes){
+            if (allClothes instanceof ManClothes) {
+                ManClothes manClothes = (ManClothes) allClothes;
+                manClothes.dressMan();
             }
         }
 
     }
     public static void dressWomen(Clothes[] clothes) {
-        for (Clothes clothes1 : clothes) {
-            if (clothes1 instanceof WomenClothes) {
-                WomenClothes mc = (WomenClothes) clothes1;
-                mc.dressWomen();
+        for (Clothes allClothes : clothes) {
+            if (allClothes instanceof WomenClothes) {
+                WomenClothes womenClothes = (WomenClothes) allClothes;
+                womenClothes.dressWomen();
             }
         }
     }
