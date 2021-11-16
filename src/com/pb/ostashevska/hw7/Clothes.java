@@ -2,17 +2,9 @@ package com.pb.ostashevska.hw7;
 
 public abstract class  Clothes {
 
-    public String size;
+    Size size;
     public int price;
     public String color;
-
-    public String getSize(String size) {
-        return this.size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
 
     public int getPrice(int price) {
         return this.price;
@@ -29,4 +21,13 @@ public abstract class  Clothes {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public Size getSize(String s) {
+        return size;
+    }
+
+    public void setSize(String size) {
+         size = size;
+    }
+
 }

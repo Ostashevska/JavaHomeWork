@@ -24,26 +24,28 @@ public class Atelier {
         Tshirt tshirt = new Tshirt();
         tshirt.setColor(" white ");
         tshirt.setPrice(100);
-        tshirt.setSize(" M ");
+        tshirt.getSize("m");
 
         Pants pants = new Pants();
         pants.setColor(" black ");
         pants.setPrice(150);
-        pants.setSize(" M ");
+        pants.getSize("m");
 
         Tie tie = new Tie();
         tie.setColor(" green ");
         tie.setPrice(50);
-        tie.setSize(" M ");
+        tie.getSize("m");
 
         Skirt skirt = new Skirt();
         skirt.setColor(" blue ");
         skirt.setPrice(150);
-        skirt.setSize(" M ");
+        skirt.getSize("m");
 
         Clothes[] clothes = new Clothes[] {tshirt, pants, tie, skirt};
 
+        System.out.println("Чоловічий одяг: ");
         dressMan(clothes);
+        System.out.println("Жіночий одяг: ");
         dressWomen(clothes);
 
     }
