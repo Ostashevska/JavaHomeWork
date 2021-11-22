@@ -7,13 +7,13 @@ public class Auth {
 
     public void signUp(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
         String loginRegex = "[a-zA-Z0-9]";
-        String passwordRegex = "[a-zA-Z0-9 + _]";
+        String passwordRegex = "[a-zA-Z0-9+_]";
         if (login.length() < 20 && login.length() > 5) {
-            if (login.matches(loginRegex)) {
-                this.login = login;
-            } else {
+            if (!login.matches(loginRegex)) {
                 System.out.println("Логін не відповідає вимогам: логін може містити лише латинські літери та цифри");
                 throw new WrongLoginException();
+            } else {
+                this.login = login;
             }
         } else {
             System.out.println("Логін не відповідає вимогам: довжина логіну повинна бути більше 5-ти та менше 20-ти символів");
@@ -21,7 +21,7 @@ public class Auth {
         }
 
         if (password.length() > 5) {
-            if (/*password == "[a-zA-Z0-9 + _]"*/password.matches(passwordRegex) && password ==confirmPassword) {
+            if (password.matches(passwordRegex) && password ==confirmPassword) {
                 this.password = password;
             } else {
                 System.out.println("Пароль не відповідає вимогам: може містити лише латинські літери, цифри та символ підкреслення");

@@ -28,9 +28,7 @@ public class OnlineShop {
         } catch (WrongPasswordException e1) {
             e1.printStackTrace();
         }
-        finally {
-
-        }
+        finally { }
 
 
         System.out.println("Увійдіть на сайт: " + "\n Введіть логін: ");
@@ -46,8 +44,6 @@ public class OnlineShop {
         } catch (WrongLoginException e) {
             e.printStackTrace();
         }
-        finally {
-
-        }
+        finally { }
     }
 }
