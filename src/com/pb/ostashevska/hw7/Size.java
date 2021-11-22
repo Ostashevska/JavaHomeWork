@@ -1,6 +1,6 @@
 package com.pb.ostashevska.hw7;
 
-        public enum Size {
+   enum Size {
 
         L ("l",40),
         M ("m",38),

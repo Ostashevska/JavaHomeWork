@@ -21,25 +21,27 @@ public class Atelier {
     }
 
     public static void main(String[] args){
+
+
         Tshirt tshirt = new Tshirt();
         tshirt.setColor(" white ");
         tshirt.setPrice(100);
-        tshirt.getSize("m");
+        tshirt.setSize("m");
 
         Pants pants = new Pants();
         pants.setColor(" black ");
         pants.setPrice(150);
-        pants.getSize("m");
+        pants.setSize("m");
 
         Tie tie = new Tie();
         tie.setColor(" green ");
         tie.setPrice(50);
-        tie.getSize("m");
+        tie.setSize("m");
 
         Skirt skirt = new Skirt();
         skirt.setColor(" blue ");
         skirt.setPrice(150);
-        skirt.getSize("m");
+        skirt.setSize("m");
 
         Clothes[] clothes = new Clothes[] {tshirt, pants, tie, skirt};
 
