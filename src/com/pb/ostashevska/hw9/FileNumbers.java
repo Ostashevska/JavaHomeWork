@@ -16,8 +16,7 @@ public class FileNumbers {
     private static final Logger LOGGER = Logger.getLogger(FileNumbers.class.getName());
 
     public  void createNumbersFile() throws Exception {
-        Path testFile1 = Files.createFile(Paths.get("file/numbers.txt"));
-        System.out.println(Files.exists(Paths.get("file/numbers.txt")));
+
         Path path = Paths.get("file/numbers.txt");
 
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
@@ -41,13 +40,11 @@ public class FileNumbers {
     public void createOddNumbersFile() throws IOException {
         LOGGER.entering(getClass().getName(), "createOddNumbersFile");
 
-        Path testFile1 = Files.createFile(Paths.get("file/odd-numbers.txt"));
-        System.out.println(Files.exists(Paths.get("file/odd-numbers.txt")));
-
         Path path = Paths.get("file/numbers.txt");
         List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
 
-        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+        Path path1 = Paths.get("file/odd-numbers.txt");
+        try (BufferedWriter writer = Files.newBufferedWriter(path1)) {
             for (String s : lines) {
                 int i = Integer.parseInt(s.trim());
                 if (i % 2 == 1) {
