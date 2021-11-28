@@ -1,15 +1,16 @@
 package com.pb.ostashevska.hw8;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Auth {
-    public String login;
-    public String password;
+    public String login = "admin";
+    public String password = "Pa55w0rd";
 
 
-    public void signUp(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
-        String loginRegex = "[a-zA-Z0-9]";
-        String passwordRegex = "[a-zA-Z0-9+_]";
+    public void signUp(@NotNull String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
+
         if (login.length() < 20 && login.length() > 5) {
-            if (!login.matches(loginRegex)) {
+            if (!login.matches("[a-zA-Z0-9_]")) {
                 System.out.println("Логін не відповідає вимогам: логін може містити лише латинські літери та цифри");
                 throw new WrongLoginException();
             } else {
@@ -21,7 +22,7 @@ public class Auth {
         }
 
         if (password.length() > 5) {
-            if (password.matches(passwordRegex) && password ==confirmPassword) {
+            if (password.matches("[a-zA-Z0-9_]") && password ==confirmPassword) {
                 this.password = password;
             } else {
                 System.out.println("Пароль не відповідає вимогам: може містити лише латинські літери, цифри та символ підкреслення");
