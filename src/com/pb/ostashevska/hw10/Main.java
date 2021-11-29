@@ -3,7 +3,7 @@ package com.pb.ostashevska.hw10;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-      /* NumBox<Float> num1= new NumBox<>(5);
+       NumBox<Float> num1= new NumBox<>(5);
        num1.add(0, 2F);
         num1.add(1, 2.5F);
         num1.add(2, 5F);
@@ -14,7 +14,7 @@ public class Main {
         num1.average();
         num1.length ();
         num1.get(3);
-        num1.max();*/
+        num1.max();
 
         NumBox<Integer> num2= new NumBox<>(5);
         num2.add(0, 2);
